@@ -1,0 +1,58 @@
+﻿using EconoHome.Application.Interfaces;
+using EconoHome.Domain.Enums;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EconoHome.Application.Features.Transactions.Commands.Handlers
+{
+    public class UpdateTransactionHandler : IRequestHandler<UpdateTransactionCommand, Unit>
+    {
+        private readonly ITransactionRepository _transactionRepository;
+        private readonly IPersonRepository _personRepository;
+        private readonly ICategoryRepository _categoryRepository;
+
+        public UpdateTransactionHandler(
+            ITransactionRepository transactionRepository,
+            IPersonRepository personRepository,
+            ICategoryRepository categoryRepository)
+        {
+            _transactionRepository = transactionRepository;
+            _personRepository = personRepository;
+            _categoryRepository = categoryRepository;
+        }
+
+        public async Task<Unit> Handle(UpdateTransactionCommand request, CancellationToken ct)
+        {
+            var transaction = await _transactionRepository.GetByIdAsync(request.Id)
+                ?? throw new KeyNotFoundException("Transação não encontrada.");
+
+            var person = await _personRepository.GetByIdAsync(request.PersonId)
+                ?? throw new KeyNotFoundException("Pessoa não encontrada.");
+
+            var category = await _categoryRepository.GetByIdAsync(request.CategoryId)
+                ?? throw new KeyNotFoundException("Categoria não encontrada.");
+
+            // Regra: Menor de idade não pode ter Receita (Income = 2 na sua lógica)
+            if (person.Age < 18 && request.Type == TransactionType.Income)
+            {
+                throw new InvalidOperationException("Menores de 18 anos não podem registrar receitas.");
+            }
+
+            // Regra: Tipo da transação deve bater com o propósito da categoria
+            if ((int)request.Type != (int)category.Purpose)
+            {
+                throw new InvalidOperationException("O tipo da transação é incompatível com a categoria selecionada.");
+            }
+
+            // Atualiza a entidade (Crie esse método Update na sua classe Transaction do Domain)
+            transaction.Update(request.Description, request.Amount, request.Type, request.CategoryId, request.PersonId);
+
+            await _transactionRepository.UpdateAsync(transaction);
+            return Unit.Value;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+﻿using EconoHome.Application.Features.Transactions.Commands;
+using EconoHome.Application.Interfaces;
+using EconoHome.Domain.Entities;
+using MediatR;
+
+namespace EconoHome.Application.Features.Transactions.Handlers
+{
+    public class CreateTransactionHandler : IRequestHandler<CreateTransactionCommand, Guid>
+    {
+        private readonly ITransactionRepository _transactionRepository;
+        private readonly IPersonRepository _personRepository;
+        private readonly ICategoryRepository _categoryRepository;
+
+        public CreateTransactionHandler(ITransactionRepository tRepo, IPersonRepository pRepo, ICategoryRepository cRepo)
+        {
+            _transactionRepository = tRepo;
+            _personRepository = pRepo;
+            _categoryRepository = cRepo;
+        }
+
+        public async Task<Guid> Handle(CreateTransactionCommand request, CancellationToken ct)
+        {
+            // Busca e valida a existência da pessoa
+            var person = await _personRepository.GetByIdAsync(request.PersonId)
+                ?? throw new KeyNotFoundException("Pessoa não encontrada.");
+
+            // Busca e valida a existência da categoria
+            var category = await _categoryRepository.GetByIdAsync(request.CategoryId)
+                ?? throw new KeyNotFoundException("Categoria não encontrada.");
+
+            // O construtor da entidade Transaction aplica todas as regras de negócio:
+            // 1. Validação de valores (positivo, descrição com máx 400 caracteres)
+            // 2. REGRA: Menor de idade (< 18 anos) só pode registrar despesas
+            // 3. REGRA: Categoria deve ser compatível com o tipo de transação
+            var transaction = new Transaction(request.Description, request.Amount, request.Type, person, category);
+
+            await _transactionRepository.AddAsync(transaction);
+            return transaction.Id;
+        }
+    }
+}

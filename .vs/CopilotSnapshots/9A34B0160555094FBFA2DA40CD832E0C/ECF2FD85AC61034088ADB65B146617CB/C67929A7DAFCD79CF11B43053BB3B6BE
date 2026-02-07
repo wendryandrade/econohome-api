@@ -1,0 +1,240 @@
+﻿using EconoHome.Domain.Entities;
+using EconoHome.Domain.Enums;
+using EconoHome.Infrastructure.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
+
+namespace EconoHome.Infrastructure.Persistence.Data
+{
+    /// <summary>
+    /// Classe responsável por popular o banco de dados com dados iniciais (Seed Data)
+    /// Garante que o sistema tenha dados de exemplo para testes e demonstração
+    /// </summary>
+    public static class DatabaseSeeder
+    {
+        /// <summary>
+        /// Método principal que executa o seed de dados
+        /// Verifica se já existem dados antes de popular para evitar duplicação
+        /// </summary>
+        public static async Task SeedAsync(EconoHomeDbContext context)
+        {
+            // Garante que o banco de dados foi criado
+            await context.Database.EnsureCreatedAsync();
+
+            // Verifica se já existem dados no banco
+            // Se existir pelo menos 1 pessoa, assume que o seed já foi executado
+            if (await context.Persons.AnyAsync())
+            {
+                return; // Seed já foi executado anteriormente
+            }
+
+            // ============================================
+            // SEED DE PESSOAS
+            // ============================================
+            // Cria 4 pessoas com diferentes idades para testar regras de negócio
+
+            var personAdult1 = new Person("João Silva", 30);
+            var personAdult2 = new Person("Maria Santos", 25);
+            var personMinor1 = new Person("Pedro Costa", 16); // MENOR DE IDADE - Só pode ter despesas
+            var personMinor2 = new Person("Ana Lima", 17);    // MENOR DE IDADE - Só pode ter despesas
+
+            await context.Persons.AddRangeAsync(personAdult1, personAdult2, personMinor1, personMinor2);
+            await context.SaveChangesAsync();
+
+            // ============================================
+            // SEED DE CATEGORIAS
+            // ============================================
+            // Cria categorias com diferentes finalidades para demonstrar compatibilidade
+
+            // CATEGORIAS DE DESPESA (Expense)
+            var categoryExpense1 = new Category("Alimentação", CategoryPurpose.Expense);
+            var categoryExpense2 = new Category("Transporte", CategoryPurpose.Expense);
+            var categoryExpense3 = new Category("Educação", CategoryPurpose.Expense);
+
+            // CATEGORIAS DE RECEITA (Income)
+            var categoryIncome1 = new Category("Salário", CategoryPurpose.Income);
+            var categoryIncome2 = new Category("Freelance", CategoryPurpose.Income);
+            var categoryIncome3 = new Category("Investimentos", CategoryPurpose.Income);
+
+            // CATEGORIAS MISTAS (Both) - Aceita receita E despesa
+            var categoryBoth1 = new Category("Reembolsos", CategoryPurpose.Both);
+            var categoryBoth2 = new Category("Ajuste de Contas", CategoryPurpose.Both);
+
+            await context.Categories.AddRangeAsync(
+                categoryExpense1, categoryExpense2, categoryExpense3,
+                categoryIncome1, categoryIncome2, categoryIncome3,
+                categoryBoth1, categoryBoth2
+            );
+            await context.SaveChangesAsync();
+
+            // ============================================
+            // SEED DE TRANSAÇÕES
+            // ============================================
+            // Cria transações respeitando TODAS as regras de negócio:
+            // 1. Menor de idade (< 18) só pode ter DESPESAS
+            // 2. Categoria deve ser compatível com o tipo de transação
+
+            var transactions = new List<Transaction>();
+
+            // ------------------------------------------
+            // TRANSAÇÕES DE ADULTOS (João e Maria)
+            // Adultos podem ter RECEITAS e DESPESAS
+            // ------------------------------------------
+
+            // João Silva (30 anos) - RECEITAS
+            transactions.Add(new Transaction(
+                "Salário mensal de Abril",
+                3500.00m,
+                TransactionType.Income,
+                personAdult1,
+                categoryIncome1 // Categoria: Salário (Income)
+            ));
+
+            transactions.Add(new Transaction(
+                "Trabalho freelance de desenvolvimento",
+                1200.00m,
+                TransactionType.Income,
+                personAdult1,
+                categoryIncome2 // Categoria: Freelance (Income)
+            ));
+
+            // João Silva (30 anos) - DESPESAS
+            transactions.Add(new Transaction(
+                "Compras no supermercado",
+                450.50m,
+                TransactionType.Expense,
+                personAdult1,
+                categoryExpense1 // Categoria: Alimentação (Expense)
+            ));
+
+            transactions.Add(new Transaction(
+                "Gasolina do carro",
+                200.00m,
+                TransactionType.Expense,
+                personAdult1,
+                categoryExpense2 // Categoria: Transporte (Expense)
+            ));
+
+            // João Silva - TRANSAÇÃO COM CATEGORIA BOTH
+            transactions.Add(new Transaction(
+                "Reembolso de combustível",
+                80.00m,
+                TransactionType.Income,
+                personAdult1,
+                categoryBoth1 // Categoria: Reembolsos (Both) - Aceita Income
+            ));
+
+            // Maria Santos (25 anos) - RECEITAS
+            transactions.Add(new Transaction(
+                "Salário mensal de Abril",
+                4200.00m,
+                TransactionType.Income,
+                personAdult2,
+                categoryIncome1 // Categoria: Salário (Income)
+            ));
+
+            transactions.Add(new Transaction(
+                "Rendimento de investimentos",
+                350.00m,
+                TransactionType.Income,
+                personAdult2,
+                categoryIncome3 // Categoria: Investimentos (Income)
+            ));
+
+            // Maria Santos (25 anos) - DESPESAS
+            transactions.Add(new Transaction(
+                "Conta do restaurante",
+                180.00m,
+                TransactionType.Expense,
+                personAdult2,
+                categoryExpense1 // Categoria: Alimentação (Expense)
+            ));
+
+            transactions.Add(new Transaction(
+                "Curso de inglês",
+                500.00m,
+                TransactionType.Expense,
+                personAdult2,
+                categoryExpense3 // Categoria: Educação (Expense)
+            ));
+
+            // Maria Santos - TRANSAÇÃO COM CATEGORIA BOTH
+            transactions.Add(new Transaction(
+                "Ajuste de conta compartilhada",
+                50.00m,
+                TransactionType.Expense,
+                personAdult2,
+                categoryBoth2 // Categoria: Ajuste de Contas (Both) - Aceita Expense
+            ));
+
+            // ------------------------------------------
+            // TRANSAÇÕES DE MENORES DE IDADE
+            // IMPORTANTE: Menores só podem ter DESPESAS
+            // ------------------------------------------
+
+            // Pedro Costa (16 anos) - APENAS DESPESAS
+            // NÃO podemos criar receitas para menores de idade
+            transactions.Add(new Transaction(
+                "Lanche na escola",
+                25.50m,
+                TransactionType.Expense,
+                personMinor1,
+                categoryExpense1 // Categoria: Alimentação (Expense)
+            ));
+
+            transactions.Add(new Transaction(
+                "Passagem de ônibus",
+                8.00m,
+                TransactionType.Expense,
+                personMinor1,
+                categoryExpense2 // Categoria: Transporte (Expense)
+            ));
+
+            transactions.Add(new Transaction(
+                "Material escolar",
+                75.00m,
+                TransactionType.Expense,
+                personMinor1,
+                categoryExpense3 // Categoria: Educação (Expense)
+            ));
+
+            // Ana Lima (17 anos) - APENAS DESPESAS
+            transactions.Add(new Transaction(
+                "Cinema com amigos",
+                40.00m,
+                TransactionType.Expense,
+                personMinor2,
+                categoryExpense1 // Categoria: Alimentação (Expense)
+            ));
+
+            transactions.Add(new Transaction(
+                "Uber para casa",
+                15.00m,
+                TransactionType.Expense,
+                personMinor2,
+                categoryExpense2 // Categoria: Transporte (Expense)
+            ));
+
+            // Menor de idade usando categoria BOTH (permitido, pois é DESPESA)
+            transactions.Add(new Transaction(
+                "Ajuste de conta com amigo",
+                20.00m,
+                TransactionType.Expense,
+                personMinor2,
+                categoryBoth2 // Categoria: Ajuste de Contas (Both) - Aceita Expense
+            ));
+
+            // Salva todas as transações no banco
+            await context.Transactions.AddRangeAsync(transactions);
+            await context.SaveChangesAsync();
+
+            // ============================================
+            // RESUMO DO SEED
+            // ============================================
+            // PESSOAS: 4 (2 adultos, 2 menores)
+            // CATEGORIAS: 8 (3 Expense, 3 Income, 2 Both)
+            // TRANSAÇÕES: 16 total
+            //   - Adultos: 10 transações (5 receitas, 5 despesas)
+            //   - Menores: 6 transações (0 receitas, 6 despesas) ✅ Regra respeitada
+        }
+    }
+}

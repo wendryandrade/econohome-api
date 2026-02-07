@@ -1,0 +1,339 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|solutionrelative:econohome.domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\transactions\\commands\\handlers\\createtransactionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\transactions\\commands\\handlers\\createtransactionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\transactions\\queries\\handlers\\getalltransactionshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\transactions\\queries\\handlers\\getalltransactionshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\persons\\queries\\handlers\\getallpersonshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\persons\\queries\\handlers\\getallpersonshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wendr\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-16b0349a-5505-4f09-bfa2-da40cd832e0c.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C99C3F29-6341-4973-BF04-4F6B69EB65FC}|EconoHome\\EconoHome.API.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome\\controllers\\personscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C99C3F29-6341-4973-BF04-4F6B69EB65FC}|EconoHome\\EconoHome.API.csproj|solutionrelative:econohome\\controllers\\personscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\persons\\queries\\getallpersonsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\persons\\queries\\getallpersonsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.domain\\enums\\categorypurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|solutionrelative:econohome.domain\\enums\\categorypurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.domain\\enums\\transactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|solutionrelative:econohome.domain\\enums\\transactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C99C3F29-6341-4973-BF04-4F6B69EB65FC}|EconoHome\\EconoHome.API.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C99C3F29-6341-4973-BF04-4F6B69EB65FC}|EconoHome\\EconoHome.API.csproj|solutionrelative:econohome\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C99C3F29-6341-4973-BF04-4F6B69EB65FC}|EconoHome\\EconoHome.API.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C99C3F29-6341-4973-BF04-4F6B69EB65FC}|EconoHome\\EconoHome.API.csproj|solutionrelative:econohome\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\categories\\commands\\handlers\\updatecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\categories\\commands\\handlers\\updatecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\transactions\\queries\\getalltransactionsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\transactions\\queries\\getalltransactionsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.domain\\entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|solutionrelative:econohome.domain\\entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.application\\features\\transactions\\commands\\handlers\\updatetransactionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4644977-E1D3-4148-B29C-97F012851548}|EconoHome.Application\\EconoHome.Application.csproj|solutionrelative:econohome.application\\features\\transactions\\commands\\handlers\\updatetransactionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222A6B1E-6F9F-46E1-A5B4-4AB9E0DD0DA8}|EconoHome.Domain\\EconoHome.Domain.csproj|solutionrelative:econohome.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB72068-0AD4-45EC-BC79-FF4311143B28}|EconoHome.Infrastructure\\EconoHome.Infrastructure.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.infrastructure\\persistence\\context\\econohomedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB72068-0AD4-45EC-BC79-FF4311143B28}|EconoHome.Infrastructure\\EconoHome.Infrastructure.csproj|solutionrelative:econohome.infrastructure\\persistence\\context\\econohomedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB72068-0AD4-45EC-BC79-FF4311143B28}|EconoHome.Infrastructure\\EconoHome.Infrastructure.csproj|c:\\users\\wendr\\desenvolvimento\\econohome\\econohome.infrastructure\\persistence\\data\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB72068-0AD4-45EC-BC79-FF4311143B28}|EconoHome.Infrastructure\\EconoHome.Infrastructure.csproj|solutionrelative:econohome.infrastructure\\persistence\\data\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAAAF8BAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-02-07T22:20:03.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetAllPersonsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Persons\\Queries\\Handlers\\GetAllPersonsHandler.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Persons\\Queries\\Handlers\\GetAllPersonsHandler.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Persons\\Queries\\Handlers\\GetAllPersonsHandler.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Persons\\Queries\\Handlers\\GetAllPersonsHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T22:08:25.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetAllPersonsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Persons\\Queries\\GetAllPersonsQuery.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Persons\\Queries\\GetAllPersonsQuery.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Persons\\Queries\\GetAllPersonsQuery.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Persons\\Queries\\GetAllPersonsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T22:08:20.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonsController.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome\\Controllers\\PersonsController.cs",
+              "RelativeDocumentMoniker": "EconoHome\\Controllers\\PersonsController.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome\\Controllers\\PersonsController.cs",
+              "RelativeToolTip": "EconoHome\\Controllers\\PersonsController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwB4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T22:07:31.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DatabaseSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Infrastructure\\Persistence\\Data\\DatabaseSeeder.cs",
+              "RelativeDocumentMoniker": "EconoHome.Infrastructure\\Persistence\\Data\\DatabaseSeeder.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Infrastructure\\Persistence\\Data\\DatabaseSeeder.cs",
+              "RelativeToolTip": "EconoHome.Infrastructure\\Persistence\\Data\\DatabaseSeeder.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAIBJwOsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:58:56.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransactionType.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Enums\\TransactionType.cs",
+              "RelativeDocumentMoniker": "EconoHome.Domain\\Enums\\TransactionType.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Enums\\TransactionType.cs",
+              "RelativeToolTip": "EconoHome.Domain\\Enums\\TransactionType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:57:26.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryPurpose.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Enums\\CategoryPurpose.cs",
+              "RelativeDocumentMoniker": "EconoHome.Domain\\Enums\\CategoryPurpose.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Enums\\CategoryPurpose.cs",
+              "RelativeToolTip": "EconoHome.Domain\\Enums\\CategoryPurpose.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:57:25.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome\\Program.cs",
+              "RelativeDocumentMoniker": "EconoHome\\Program.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome\\Program.cs",
+              "RelativeToolTip": "EconoHome\\Program.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAwwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:35:20.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Entities\\Person.cs",
+              "RelativeDocumentMoniker": "EconoHome.Domain\\Entities\\Person.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Entities\\Person.cs",
+              "RelativeToolTip": "EconoHome.Domain\\Entities\\Person.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:07:17.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EconoHomeDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Infrastructure\\Persistence\\Context\\EconoHomeDbContext.cs",
+              "RelativeDocumentMoniker": "EconoHome.Infrastructure\\Persistence\\Context\\EconoHomeDbContext.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Infrastructure\\Persistence\\Context\\EconoHomeDbContext.cs",
+              "RelativeToolTip": "EconoHome.Infrastructure\\Persistence\\Context\\EconoHomeDbContext.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:06:46.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "EconoHome.Domain\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "EconoHome.Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:06:27.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateTransactionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\CreateTransactionHandler.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\CreateTransactionHandler.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\CreateTransactionHandler.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\CreateTransactionHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:06:14.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpdateTransactionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\UpdateTransactionHandler.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\UpdateTransactionHandler.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\UpdateTransactionHandler.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Transactions\\Commands\\Handlers\\UpdateTransactionHandler.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAIBJwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:05:55.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Entities\\Transaction.cs",
+              "RelativeDocumentMoniker": "EconoHome.Domain\\Entities\\Transaction.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Domain\\Entities\\Transaction.cs",
+              "RelativeToolTip": "EconoHome.Domain\\Entities\\Transaction.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:05:34.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "EconoHome\\Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "EconoHome\\Controllers\\TransactionsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:05:20.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllTransactionsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Queries\\Handlers\\GetAllTransactionsHandler.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Transactions\\Queries\\Handlers\\GetAllTransactionsHandler.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Queries\\Handlers\\GetAllTransactionsHandler.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Transactions\\Queries\\Handlers\\GetAllTransactionsHandler.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:05:03.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetAllTransactionsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Queries\\GetAllTransactionsQuery.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Transactions\\Queries\\GetAllTransactionsQuery.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Transactions\\Queries\\GetAllTransactionsQuery.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Transactions\\Queries\\GetAllTransactionsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:04:56.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "plan-16b0349a-5505-4f09-bfa2-da40cd832e0c.md",
+              "DocumentMoniker": "C:\\Users\\wendr\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-16b0349a-5505-4f09-bfa2-da40cd832e0c.md",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-16b0349a-5505-4f09-bfa2-da40cd832e0c.md",
+              "ToolTip": "C:\\Users\\wendr\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-16b0349a-5505-4f09-bfa2-da40cd832e0c.md [Somente Leitura]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-16b0349a-5505-4f09-bfa2-da40cd832e0c.md [Somente Leitura]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-02-07T19:04:40.711Z",
+              "EditorCaption": " [Somente Leitura]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateCategoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Categories\\Commands\\Handlers\\UpdateCategoryHandler.cs",
+              "RelativeDocumentMoniker": "EconoHome.Application\\Features\\Categories\\Commands\\Handlers\\UpdateCategoryHandler.cs",
+              "ToolTip": "C:\\Users\\wendr\\Desenvolvimento\\EconoHome\\EconoHome.Application\\Features\\Categories\\Commands\\Handlers\\UpdateCategoryHandler.cs",
+              "RelativeToolTip": "EconoHome.Application\\Features\\Categories\\Commands\\Handlers\\UpdateCategoryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:01:32.365Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+﻿using EconoHome.Application.Features.Categories.Commands;
+using EconoHome.Application.Features.Categories.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EconoHome.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CategoriesController : ControllerBase
+{
+    private readonly IMediator _mediator;
+
+    public CategoriesController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateCategoryCommand command)
+    {
+        var id = await _mediator.Send(command);
+        return Ok(id);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var categories = await _mediator.Send(new GetAllCategoriesQuery());
+        return Ok(categories);
+    }
+
+    [HttpGet("summary")]
+    public async Task<IActionResult> GetSummary()
+    {
+        var summary = await _mediator.Send(new GetCategoriesSummaryQuery());
+        return Ok(summary);
+    }
+
+    // PUT: api/categories/{id}
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdateCategoryCommand command)
+    {
+        if (id != command.Id) return BadRequest("ID do corpo e da URL não coincidem.");
+
+        await _mediator.Send(command);
+        return NoContent(); // Retorno padrão para sucesso em Update
+    }
+
+    // DELETE: api/categories/{id}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        await _mediator.Send(new DeleteCategoryCommand(id));
+        return NoContent(); // Sucesso sem conteúdo (padrão para DELETE)
+    }
+}

@@ -1,0 +1,36 @@
+﻿using EconoHome.Application.Features.Transactions.Commands;
+using EconoHome.Application.Interfaces;
+using EconoHome.Domain.Entities;
+using MediatR;
+
+namespace EconoHome.Application.Features.Transactions.Handlers
+{
+    public class CreateTransactionHandler : IRequestHandler<CreateTransactionCommand, Guid>
+    {
+        private readonly ITransactionRepository _transactionRepository;
+        private readonly IPersonRepository _personRepository;
+        private readonly ICategoryRepository _categoryRepository;
+
+        public CreateTransactionHandler(ITransactionRepository tRepo, IPersonRepository pRepo, ICategoryRepository cRepo)
+        {
+            _transactionRepository = tRepo;
+            _personRepository = pRepo;
+            _categoryRepository = cRepo;
+        }
+
+        public async Task<Guid> Handle(CreateTransactionCommand request, CancellationToken ct)
+        {
+            var person = await _personRepository.GetByIdAsync(request.PersonId)
+                ?? throw new KeyNotFoundException("Pessoa não encontrada.");
+
+            var category = await _categoryRepository.GetByIdAsync(request.CategoryId)
+                ?? throw new KeyNotFoundException("Categoria não encontrada.");
+
+            // O construtor da Entidade Transaction já valida as regras do teste!
+            var transaction = new Transaction(request.Description, request.Amount, request.Type, person, category);
+
+            await _transactionRepository.AddAsync(transaction);
+            return transaction.Id;
+        }
+    }
+}

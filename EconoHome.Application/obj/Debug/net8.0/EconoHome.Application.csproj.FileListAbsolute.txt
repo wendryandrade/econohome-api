@@ -1,0 +1,15 @@
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\bin\Debug\net8.0\EconoHome.Application.deps.json
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\bin\Debug\net8.0\EconoHome.Application.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\bin\Debug\net8.0\EconoHome.Application.pdb
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\bin\Debug\net8.0\EconoHome.Domain.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\bin\Debug\net8.0\EconoHome.Domain.pdb
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.csproj.AssemblyReference.cache
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.AssemblyInfoInputs.cache
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.AssemblyInfo.cs
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.csproj.CoreCompileInputs.cache
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHom.BDD2808A.Up2Date
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\refint\EconoHome.Application.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\EconoHome.Application.pdb
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Application\obj\Debug\net8.0\ref\EconoHome.Application.dll

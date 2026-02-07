@@ -1,0 +1,11 @@
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\bin\Debug\net8.0\EconoHome.Domain.deps.json
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\bin\Debug\net8.0\EconoHome.Domain.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\bin\Debug\net8.0\EconoHome.Domain.pdb
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\EconoHome.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\EconoHome.Domain.AssemblyInfoInputs.cache
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\EconoHome.Domain.AssemblyInfo.cs
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\EconoHome.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\EconoHome.Domain.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\refint\EconoHome.Domain.dll
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\EconoHome.Domain.pdb
+C:\Users\wendr\Desenvolvimento\EconoHome\EconoHome.Domain\obj\Debug\net8.0\ref\EconoHome.Domain.dll

@@ -1,0 +1,23 @@
+﻿using EconoHome.Application.Features.Persons.DTOs;
+using EconoHome.Application.Interfaces;
+using MediatR;
+
+namespace EconoHome.Application.Features.Persons.Queries.Handlers
+{
+    public class GetAllPersonsHandler : IRequestHandler<GetAllPersonsQuery, IEnumerable<PersonResponse>>
+    {
+        private readonly IPersonRepository _personRepository;
+
+        public GetAllPersonsHandler(IPersonRepository personRepository)
+        {
+            _personRepository = personRepository;
+        }
+
+        public async Task<IEnumerable<PersonResponse>> Handle(GetAllPersonsQuery request, CancellationToken ct)
+        {
+            var persons = await _personRepository.GetAllAsync();
+
+            return persons.Select(p => new PersonResponse(p.Id, p.Name, p.Age));
+        }
+    }
+}

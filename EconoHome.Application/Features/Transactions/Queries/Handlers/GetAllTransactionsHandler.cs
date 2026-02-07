@@ -1,0 +1,39 @@
+using EconoHome.Application.Features.Transactions.DTOs;
+using EconoHome.Application.Interfaces;
+using MediatR;
+
+namespace EconoHome.Application.Features.Transactions.Queries.Handlers
+{
+    // Handler que lista todas as transações (receitas e despesas)
+    // É tipo um extrato bancário, mostra tudo que aconteceu
+    public class GetAllTransactionsHandler : IRequestHandler<GetAllTransactionsQuery, IEnumerable<TransactionResponse>>
+    {
+        private readonly ITransactionRepository _transactionRepository;
+
+        public GetAllTransactionsHandler(ITransactionRepository transactionRepository)
+        {
+            _transactionRepository = transactionRepository;
+        }
+
+        public async Task<IEnumerable<TransactionResponse>> Handle(GetAllTransactionsQuery request, CancellationToken ct)
+        {
+            // Busca tudo do banco, já vem com os dados da categoria e pessoa (include automático)
+            var transactions = await _transactionRepository.GetAllAsync();
+
+            // Monta o DTO com as infos importantes:
+            // - ID da transação
+            // - Descrição (ex: "Compras no mercado")
+            // - Valor
+            // - Tipo (1 = Despesa, 2 = Receita)
+            // - Nome da categoria e da pessoa pra facilitar a vida do front
+            return transactions.Select(t => new TransactionResponse(
+                t.Id,
+                t.Description,
+                t.Amount,
+                (int)t.Type,
+                t.Category.Description,
+                t.Person.Name
+            ));
+        }
+    }
+}

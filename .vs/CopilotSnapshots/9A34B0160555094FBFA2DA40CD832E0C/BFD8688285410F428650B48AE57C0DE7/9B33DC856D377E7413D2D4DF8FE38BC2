@@ -1,0 +1,31 @@
+﻿using EconoHome.Application.Features.Transactions.DTOs;
+using EconoHome.Application.Interfaces;
+using MediatR;
+
+namespace EconoHome.Application.Features.Transactions.Queries.Handlers
+{
+    public class GetAllTransactionsHandler : IRequestHandler<GetAllTransactionsQuery, IEnumerable<TransactionResponse>>
+    {
+        private readonly ITransactionRepository _transactionRepository;
+
+        public GetAllTransactionsHandler(ITransactionRepository transactionRepository)
+        {
+            _transactionRepository = transactionRepository;
+        }
+
+        public async Task<IEnumerable<TransactionResponse>> Handle(GetAllTransactionsQuery request, CancellationToken ct)
+        {
+            var transactions = await _transactionRepository.GetAllAsync();
+
+            // Mapeia as transações para o DTO de resposta
+            return transactions.Select(t => new TransactionResponse(
+                t.Id,
+                t.Description,
+                t.Amount,
+                (int)t.Type,
+                t.Category.Description,
+                t.Person.Name
+            ));
+        }
+    }
+}

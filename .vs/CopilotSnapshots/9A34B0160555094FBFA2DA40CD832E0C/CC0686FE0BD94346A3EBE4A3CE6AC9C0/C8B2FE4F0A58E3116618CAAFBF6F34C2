@@ -1,0 +1,81 @@
+﻿using EconoHome.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace EconoHome.Infrastructure.Persistence.Context
+{
+    public class EconoHomeDbContext : DbContext
+    {
+        public EconoHomeDbContext(DbContextOptions<EconoHomeDbContext> options) : base(options) { }
+
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configuração da Entidade Person
+            modelBuilder.Entity<Person>(entity =>
+            {
+                entity.HasKey(p => p.Id);
+
+                // REQUISITO DO TESTE: Nome com tamanho máximo de 200 caracteres
+                entity.Property(p => p.Name)
+                    .IsRequired()
+                    .HasMaxLength(200);
+
+                entity.Property(p => p.Age)
+                    .IsRequired();
+
+                // REQUISITO DO TESTE: Relacionamento 1:N com Transações + Cascade Delete
+                // Quando uma Pessoa é excluída, todas as suas Transações são automaticamente excluídas
+                entity.HasMany(p => p.Transactions)
+                    .WithOne(t => t.Person)
+                    .HasForeignKey(t => t.PersonId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Configuração da Entidade Category
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.HasKey(c => c.Id);
+
+                // Descrição com tamanho máximo de 400 (Requisito do teste)
+                entity.Property(c => c.Description)
+                    .IsRequired()
+                    .HasMaxLength(400);
+
+                entity.Property(c => c.Purpose)
+                    .IsRequired();
+            });
+
+            // Configuração da Entidade Transaction
+            modelBuilder.Entity<Transaction>(entity =>
+            {
+                entity.HasKey(t => t.Id);
+
+                entity.Property(t => t.Description)
+                    .IsRequired()
+                    .HasMaxLength(400);
+
+                // Configuração de precisão para valores monetários
+                entity.Property(t => t.Amount)
+                    .IsRequired()
+                    .HasColumnType("decimal(18,2)");
+
+                entity.Property(t => t.Type)
+                    .IsRequired();
+
+                entity.Property(t => t.CreatedAt)
+                    .IsRequired();
+
+                // Relacionamento com Categoria
+                entity.HasOne(t => t.Category)
+                    .WithMany()
+                    .HasForeignKey(t => t.CategoryId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+        }
+    }
+}

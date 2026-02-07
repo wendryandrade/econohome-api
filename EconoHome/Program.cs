@@ -1,0 +1,82 @@
+using EconoHome.Application.Interfaces;
+using EconoHome.Infrastructure.Persistence.Context;
+using EconoHome.Infrastructure.Persistence.Data;
+using EconoHome.Infrastructure.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configurar SQL Server
+builder.Services.AddDbContext<EconoHomeDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Registro de dependências
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+
+// Adicionar MediatR (Necessário para os Handlers)
+// Substitua 'CreateTransactionHandler' por qualquer classe que esteja no projeto Application
+builder.Services.AddMediatR(cfg => {
+    cfg.RegisterServicesFromAssembly(typeof(EconoHome.Application.Features.Persons.Commands.Handlers.CreatePersonHandler).Assembly);
+});
+
+// Configuração do CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("EconoHomePolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // URL do React (Vite)
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+var app = builder.Build();
+
+// ============================================
+// SEED DE DADOS (Dados Iniciais)
+// ============================================
+// Popula o banco de dados com dados de exemplo na primeira execução
+// Isso permite testar o sistema sem precisar cadastrar dados manualmente
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<EconoHomeDbContext>();
+        
+        // Executa o seed de dados
+        // Verifica automaticamente se já existem dados antes de popular
+        await DatabaseSeeder.SeedAsync(context);
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Erro ao executar o seed de dados no banco.");
+    }
+}
+
+app.UseCors("EconoHomePolicy");
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

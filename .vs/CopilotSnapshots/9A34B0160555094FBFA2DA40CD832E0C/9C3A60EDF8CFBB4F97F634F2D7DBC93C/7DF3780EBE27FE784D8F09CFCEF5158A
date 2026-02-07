@@ -1,0 +1,32 @@
+﻿namespace EconoHome.Domain.Entities
+{
+    public class Person
+    {
+        public Guid Id { get; set; }
+        public string Name { get; private set; } = string.Empty;
+        public int Age { get; private set; }
+        public virtual ICollection<Transaction> Transactions { get; private set; } = new List<Transaction>();
+
+        // Construtor para o EF Core
+        protected Person() { }
+
+        public Person(string name, int age)
+        {
+            Id = Guid.NewGuid();
+            Update(name, age);
+        }
+
+        public void Update(string name, int age)
+        {
+            if (string.IsNullOrWhiteSpace(name) || name.Length > 200)
+                throw new ArgumentException("O nome é obrigatório e deve ter no máximo 200 caracteres.");
+
+            if (age < 0) throw new ArgumentException("A idade não pode ser negativa.");
+
+            Name = name;
+            Age = age;
+        }
+
+        public bool IsUnderage() => Age < 18;
+    }
+}

@@ -1,0 +1,38 @@
+﻿using EconoHome.Domain.Enums;
+
+namespace EconoHome.Domain.Entities
+{
+    public class Category
+    {
+        public Guid Id { get; set; }
+        public string Description { get; private set; } = string.Empty;
+        public CategoryPurpose Purpose { get; private set; }
+
+        // Construtor para o EF Core
+        protected Category() { }
+
+        public Category(string description, CategoryPurpose purpose)
+        {
+            Id = Guid.NewGuid();
+            if (string.IsNullOrWhiteSpace(description) || description.Length > 400)
+                throw new ArgumentException("A descrição é obrigatória (máx 400 caracteres).");
+
+            Description = description;
+            Purpose = purpose;
+        }
+
+        public void Update(string description, CategoryPurpose purpose)
+        {
+            if (string.IsNullOrWhiteSpace(description) || description.Length > 400)
+                throw new ArgumentException("A descrição é obrigatória (máx 400 caracteres).");
+
+            Description = description;
+            Purpose = purpose;
+        }
+
+        public bool IsCompatibleWith(TransactionType type)
+        {
+            return Purpose == CategoryPurpose.Both || (int)Purpose == (int)type;
+        }
+    }
+}
