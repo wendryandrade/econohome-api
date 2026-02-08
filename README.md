@@ -4,21 +4,6 @@ Sistema completo de controle financeiro residencial desenvolvido com **.NET 8**,
 
 ---
 
-## 📋 Índice
-
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Tecnologias](#-tecnologias)
-- [Funcionalidades](#-funcionalidades)
-- [Regras de Negócio](#-regras-de-negócio)
-- [Pré-requisitos](#-pré-requisitos)
-- [Configuração do Ambiente](#-configuração-do-ambiente)
-- [Como Executar](#-como-executar)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [API Endpoints](#-api-endpoints)
-- [Seed de Dados](#-seed-de-dados)
-
----
-
 ## 🎯 Sobre o Projeto
 
 O **EconoHome** é um sistema de controle de gastos residenciais que permite gerenciar:
